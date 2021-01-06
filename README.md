@@ -18,7 +18,7 @@ simply put this dixon.py to your site-packages directory.
 * competitive inhibition 
   * v = Vmax*S/(S+ Km*(1 + I/Ki))
 * non-competitive inhibition
-  * v = Vmax*S/(Km + S)/(1 + I/Ki) + alpha*Vmax*S/(Km + S)*(I/Ki)/(1 + I/Ki))
+  * v = Vmax*S/(Km + S)/(1 + I/Ki) + alpha*Vmax*S/(Km+S)*I/(Ki+I) 
 * mixed inhibition
   * v  = Vmax*S/(S + Km*(1 + I/Ki*(1 + S/(Km*beta)))) + Vmax*alpha*S*I/(Ki*beta)/(S + Km*(1 + I/Ki*(1 + S/(Km*beta)))) 
 * anti-competitive inhibition
