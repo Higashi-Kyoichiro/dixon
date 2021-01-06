@@ -13,3 +13,7 @@ simply put this dixon.py to your site-packages directory.
     * alpha means second Vmax with inhibitor.
     * beta means second Km and second Ki.
 * return: array(initial velocity for each (S,I)) 
+
+# technical resources
+* competitive inhibition
+$v = {Vmax*S} over {(S+ Km*(1+{I} over{Ki}))}$
