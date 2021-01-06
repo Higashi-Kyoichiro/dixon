@@ -11,7 +11,7 @@ This program was written by Kyoichiro Higashi PHD. in Meiji Pharmaceutical Unive
 '''
 import numpy as np
 
-def competitive(x,Vmax=1,Km=1,Ki=1):
+def competitive(x, Vmax=1, Km=1, Ki=1):
 	'''
 	competitive inhibition kinetics
 	arguments:
@@ -22,7 +22,7 @@ def competitive(x,Vmax=1,Km=1,Ki=1):
 	v = Vmax * S / (Km * (1 + I/Ki) + S) 
 	return v
 
-def noncompetitive(x, Vmax=1, Km=1,Ki=1,alpha=0):
+def noncompetitive(x, Vmax=1, Km=1, Ki=1, alpha=0):
 	''' 
 	noncompetitive inhibition kinetics.
 	This function treats partial inhibition as well as complete inhibition.
@@ -33,7 +33,7 @@ def noncompetitive(x, Vmax=1, Km=1,Ki=1,alpha=0):
 	Alpha=0 means Complete inhibition. 
 	returns: initial rates'''
 	S,I = x
-	v = Vmax*S/(Km+S)*Ki/(Ki+I) + alpha*Vmax*S/(Km+S)*(1-Ki/(Ki+I)) 
+	v = Vmax*S/(Km+S)*Ki/(Ki+I) + alpha*Vmax*S/(Km+S)*I/(Ki+I) 
 	return v
 
 def anticompetitive(x, Vmax=1, Km=1, Ki=1,alpha=0):
@@ -48,7 +48,7 @@ def anticompetitive(x, Vmax=1, Km=1, Ki=1,alpha=0):
 	v = Vmax * S / (Km + S * (1 + I / Ki)) + alpha * I/Ki * Vmax * S / (Km + S * (1 + I/Ki))
 	return v
 
-def mixed(x,Vmax=1,Km=1,Ki=1,alpha=0.3,beta=3):
+def mixed(x, Vmax=1, Km=1, Ki=1, alpha=0.3, beta=3):
 	'''
 	Mixed type inhibition means random-order binding of inhibitor and substrate. Alpha means the degree of decrease in Vmax, 
 	beta means increase in Km.
