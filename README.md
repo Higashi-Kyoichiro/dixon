@@ -15,5 +15,11 @@ simply put this dixon.py to your site-packages directory.
 * return: array(initial velocity for each (S,I)) 
 
 # technical resources
-* competitive inhibition
-$v = {Vmax*S} over {(S+ Km*(1+{I} over{Ki}))}$
+* competitive inhibition 
+  * v = Vmax*S/(S+ Km*(1 + I/Ki))
+* non-competitive inhibition
+  * v = Vmax*S/(Km + S)/(1 + I/Ki) + alpha*Vmax*S/(Km + S)*(I/Ki)/(1 + I/Ki))
+* mixed inhibition
+  * v  = Vmax*S/(S + Km*(1 + I/Ki*(1 + S/(Km*beta)))) + Vmax*alpha*S*I/(Ki*beta)/(S + Km*(1 + I/Ki*(1 + S/(Km*beta)))) 
+* anti-competitive inhibition
+  * v = Vmax*S/(Km + S*(1 + I/Ki))  + alpha*Vmax*S*I/Ki/(Km + S*(1 + I/Ki))
