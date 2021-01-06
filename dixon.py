@@ -6,6 +6,8 @@ All of them requires arguments x=(Substrates,Inhibitors), Vmax, Km, Ki,
 alpha(for Vmax), and beta(for Km, Ki).
 gives return initial rates as array.
 
+This program was written by Kyoichiro Higashi PHD. in Meiji Pharmaceutical University.
+2021/01/06
 '''
 import numpy as np
 
